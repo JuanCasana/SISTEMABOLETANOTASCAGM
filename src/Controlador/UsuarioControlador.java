@@ -20,6 +20,7 @@ public class UsuarioControlador {
     private String NivelAccesoUsuario;
     private char EstadoUsuario; 
 
+    
     public UsuarioControlador() {
     }
 
