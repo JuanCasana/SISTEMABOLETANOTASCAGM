@@ -10,20 +10,22 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Conexion {
+
     Connection con;
-        String url = "jdbc:sqlserver://localhost\\JUANCASANA:1433;databaseName=PruebaBoletaNotas;instance=MSSQLSERVER;encrypt=false;trustServerCertificate=true;";
-    private static final String usuario = "jcasana";
-    private static final String contrasena = "jcasana0803";
-    
-    public Connection getConnection(){
+    //jdbc:sqlserver://localhost\MSSQLSERVER:1433;databaseName=PruebaBoletaNotas;encrypt=false;trustServerCertificate=true;
+    String url = "jdbc:sqlserver://localhost\\DESKTOP-FUJUMR7:1433; databaseName=PruebaBoletaNotas;instance=MSSQLSERVER;encrypt=false;trustServerCertificate=true;";
+    private static final String usuario = "sa";
+    private static final String contrasena = "root";
+
+    public Connection getConnection() {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             con = (Connection) DriverManager.getConnection(url, usuario, contrasena);
-            //JOptionPane.showMessageDialog(null, "Conexión Exitosa");
-            
-        } catch (ClassNotFoundException | SQLException e)  {
-            System.err.println("Error al conectar con la base de datos: " + e.getMessage());
-         }
-         return con;
+            JOptionPane.showMessageDialog(null, "Conexion Exitosa");
+
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error al conectar con la base de datos:" + e.getMessage());
         }
+        return con;
+    }
 }
