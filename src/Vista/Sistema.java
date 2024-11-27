@@ -80,6 +80,7 @@ public class Sistema extends javax.swing.JFrame {
         txtIdMatriculaBNs.setVisible(false);
 
     }
+    
 
     //FUNCIONA
     public void CargarUsuario() {
@@ -873,7 +874,7 @@ public class Sistema extends javax.swing.JFrame {
 
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/nuevo xd.jpg"))); // NOI18N
         FONDO.setText("jLabel8");
-        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 730));
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 200, 730));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 730));
 
@@ -1970,7 +1971,7 @@ public class Sistema extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(JpUnidadesDidacticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE))
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 610, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2224,7 +2225,7 @@ public class Sistema extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(JpNotasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE))
+                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 610, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -4407,9 +4408,9 @@ public class Sistema extends javax.swing.JFrame {
         String condicion = "APROBADO SATISFACTORIAMENTE"; // Ejemplo, podrías calcularlo según la lógica
 
         // Llama al método de generación de reporte
-        reporte.generarReporte(ListaDesempenoBN, codigoMatricula, nombreEstudiante, programaEstudio,
-                               periodoAcademico, totalCreditos, puntajeTotal, promedioGeneral, ordenMerito, condicion);
-    
+//        reporte.generarReporte(ListaDesempenoBN, codigoMatricula, nombreEstudiante, programaEstudio,
+//                               periodoAcademico, totalCreditos, puntajeTotal, promedioGeneral, ordenMerito, condicion);
+//    
     }//GEN-LAST:event_btnBuscarBN2ActionPerformed
 
     private void btnVerNotasBNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerNotasBNMouseClicked
@@ -4518,6 +4519,7 @@ public class Sistema extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Sistema().setVisible(true);
+                  Sistema sistema = new Sistema();
             }
         });
     }
